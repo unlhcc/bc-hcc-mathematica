@@ -1,6 +1,6 @@
 # Batch Connect - HCC Mathematica
 
-![GitHub Release](https://img.shields.io/github/release/osc/bc_osc_mathematica.svg)
+[![pipeline status](https://git.unl.edu/hcc/bc-hcc-mathematica/badges/master/pipeline.svg)](https://git.unl.edu/hcc/bc-hcc-mathematica/-/commits/master)
 [![GitHub License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 A Batch Connect app designed for OSC OnDemand that launches Mathematica within an
@@ -31,7 +31,7 @@ For production, add to the per-cluster common repos and require via puppet.
 
 ## Contributing
 
-1. Fork it ( https://git.unl.edu/hcc/bc-hcc-mathematica )
+1. Fork it ( https://git.unl.edu/hcc/bc-hcc-mathematica/-/forks/new )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
