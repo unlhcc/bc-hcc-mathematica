@@ -4,7 +4,7 @@ category: Interactive Apps
 subcategory: GUIs
 role: batch_connect
 description: |
-  This app will launch a [Mathematica] GUI.  You will be able
+  This app will launch the [Mathematica] GUI.  You will be able
   to interact with the Mathematica GUI through a VNC session.
 
   [Mathematica]: https://www.wolfram.com/mathematica/
