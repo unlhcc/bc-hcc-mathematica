@@ -28,7 +28,7 @@ cd "${HOME}"
   set -x
   xfwm4 --compositor=off --daemon --sm-client-disable &
   xsetroot -solid "#C7C8CA"
-  xfsettingsd --sm-client-disable
+  xfsettingsd --sm-client-disable &
   xfce4-panel --sm-client-disable &
   xfdesktop --sm-client-disable &
 ) &
