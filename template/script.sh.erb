@@ -1,5 +1,28 @@
 #!/bin/bash
 
+<%-
+
+begin
+  cmd = "rpm -E %{rhel}"
+  output, status = Open3.capture2e(cmd)
+  if status.success?
+    rhel_version = output.strip.to_s
+    case rhel_version
+    when "7"
+      xfwm4_args="--daemon"
+    when "8"
+      xfwm4_args=""
+    end
+  else
+    raise output
+  end
+  rescue => e
+  xfwm4_args=""
+end
+
+%>
+
+
 # init lmod within container
 # # the lmod profile file are named differently on EL7 vs EL8
 # # don't ask me why
@@ -26,7 +49,7 @@ cd "${HOME}"
   export `dbus-launch`
   module restore
   set -x
-  xfwm4 --compositor=off --daemon --sm-client-disable &
+  xfwm4 --compositor=off --sm-client-disable <%= xfwm4_args %> &
   xsetroot -solid "#C7C8CA"
   xfsettingsd --sm-client-disable &
   xfce4-panel --sm-client-disable &
