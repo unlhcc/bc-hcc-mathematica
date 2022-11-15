@@ -15,11 +15,11 @@ This Batch Connect app requires the following software be available on the
 OnDemand node):
 
 - [Mathematica] 11+
-- [Singularity]
+- [Apptainer]
 - [Lmod]
 
 [Mathematica]: https://www.wolfram.com/mathematica/
-[Singularity]: https://sylabs.io/singularity/
+[Apptainer]: https://apptainer.org
 [Xfce Desktop]: https://xfce.org/
 [Lmod]: https://www.tacc.utexas.edu/research-development/tacc-projects/lmod
 
