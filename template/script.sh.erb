@@ -56,14 +56,20 @@ cd "${HOME}"
   xfdesktop --sm-client-disable &
 ) &
 
+# Check for Mathematica version
+<%- if context.mathematica_version.to_s == "mathematica/14.2" -%>
+        mathematica_exe="WolframNB"
+<%- else -%>
+        mathematica_exe="mathematica"
+<%- end -%>
+
 #
 # Start Mathematica
 #
 
 # Load the required environment
 module load <%= context.mathematica_version %>
-
 # Launch Mathematica
 module list
 set -x
-mathematica -nosplash
+$mathematica_exe -nosplash
